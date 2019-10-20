@@ -210,4 +210,44 @@ name
 ...
 has a name
 >>>
+>>> repository_folder_levelled_dict = {0: ['.'], }
+>>> folder_list = repository_folder_levelled_dict.keys[0]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'builtin_function_or_method' object is not subscriptable
+>>> folder_list = repository_folder_levelled_dict[0]
+>>> folder_list
+['.']
+>>> folder_list1 = repository_folder_levelled_dict[1]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 1
+>>> repository_folder_levelled_dict[1] = ['', 'tejas']
+>>> folder_list1 = repository_folder_levelled_dict[1]
+>>> folder_list1
+['', 'tejas']
+>>> repository_folder_levelled_dict[1 + 1] = ['', 'tejas', 'shetty']
+>>> repository_folder_levelled_dict
+{0: ['.'], 1: ['', 'tejas'], 2: ['', 'tejas', 'shetty']}
+>>> a = []
+>>> a.append(*folder_list1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: append() takes exactly one argument (2 given)
+>>> a.extend(*folder_list)
+>>> a
+['.']
+>>> a.extend(*folder_list1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: extend() takes exactly one argument (2 given)
+>>> a.extend(folder_list1)
+>>> a
+['.', '', 'tejas']
+>>>
+>>> repository_folder_levelled_dict[3] = []
+>>> repository_folder_levelled_dict[3].extend(a)
+>>> repository_folder_levelled_dict[3]
+['.', '', 'tejas']
+
 '''

@@ -74,6 +74,8 @@ def path_maker(repository_name):
                                       are the paths to the sub-folders
                                       (not files) at each level.
     '''
+    print('Current working directory')
+    print(getcwd())
     repository_member_path_list = []
     # repo_folder_levelled_dict = {0: ['.'], }
     # repository_levelled_dict = {0: ['.'], }
@@ -101,4 +103,3 @@ def path_maker(repository_name):
     return [repository_member_path_list,
             repo_folder_levelled_dict,
             repository_levelled_dict]
-
