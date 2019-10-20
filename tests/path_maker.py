@@ -101,4 +101,3 @@ def path_maker(repository_name):
     return [repository_member_path_list,
             repo_folder_levelled_dict,
             repository_levelled_dict]
-

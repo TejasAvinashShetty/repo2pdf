@@ -129,4 +129,85 @@ AUTHORS.rst
 tox.ini
 >>>
 
+
+# Could use isfile and isdir of os.path
+
+Python 3.7.3 (default, Mar 27 2019, 22:11:17)
+[GCC 7.3.0] :: Anaconda, Inc. on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from os import listdir, getcwd
+>>> from os.path import isfile, isdir
+>>> getcwd()
+'/home/tejas/git-tejas/repo2pdf/tests/test-folders/schedule/schedule-master'
+>>> isfile(".")
+False
+>>> .
+  File "<stdin>", line 1
+    .
+    ^
+SyntaxError: invalid syntax
+>>> "."
+'.'
+>>> isdir(".")
+True
+>>> listdir(".")
+['test_schedule.py', 'setup.py', 'MANIFEST.in', 'requirements-dev.txt',
+'HISTORY.rst', 'LICENSE.txt', 'docs', 'README.rst', 'FAQ.rst', 'schedule',
+ '.gitignore', '.travis.yml', 'AUTHORS.rst', 'tox.ini']
+>>> l = listdir(".")
+>>> isfile(l[0])
+True
+>>> isdir(l[0])
+False
+>>> l_docs = listdir('docs')
+>>> l_docs
+['faq.rst', '_static', 'api.rst', 'index.rst', 'Makefile', 'conf.py',
+'_templates']
+>>> isfile(l_docs[0])
+False
+>>> isfile('docs/' + l_docs[0])
+True
+>>> isdir('docs/' + l_docs[0])
+False
+>>> isdir(l_docs[0])
+False
+>>> # isfile emits True if it is a file, and false for directory, does not
+>>> # exist and every thing else.
+>>> # isdir emits True if it is a folder or directory,
+>>> # and false for file, does not
+>>> # exist and every thing else.
+>>> from os.path import join
+>>> isfile(join('docs' + l_docs[0]))
+False
+>>> join('docs' + l_docs[0])
+'docsfaq.rst'
+>>> join('docs', l_docs[0])
+'docs/faq.rst'
+>>> isfile(join('docs',l_docs[0]))
+True
+>>> isdir(join('docs',l_docs[0]))
+False
+>>> []
+[]
+>>> True
+True
+>>> [] is True
+False
+>>> ['sd'] is True
+False
+>>> if ['sd']:
+...     print('name')
+...
+name
+>>> if []:
+...     print('no name')
+...
+>>>
+>>> if []:
+...     print('no name')
+... else:
+...     print('has a name')
+...
+has a name
+>>>
 '''
