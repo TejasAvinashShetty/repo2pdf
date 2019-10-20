@@ -1,0 +1,9 @@
+'''
+['test-folders/schedule/schedule-master/test_schedule.py', 'test-folders/schedule/schedule-master/setup.py', 'test-folders/schedule/schedule-master/MANIFEST.in', 'test-folders/schedule/schedule-master/requirements-dev.txt', 'test-folders/schedule/schedule-master/HISTORY.rst', 'test-folders/schedule/schedule-master/LICENSE.txt', 'test-folders/schedule/schedule-master/README.rst', 'test-folders/schedule/schedule-master/FAQ.rst', 'test-folders/schedule/schedule-master/.gitignore', 'test-folders/schedule/schedule-master/.travis.yml', 'test-folders/schedule/schedule-master/AUTHORS.rst', 'test-folders/schedule/schedule-master/tox.ini', 'test-folders/schedule/schedule-master/docs/faq.rst', 'test-folders/schedule/schedule-master/docs/api.rst', 'test-folders/schedule/schedule-master/docs/index.rst', 'test-folders/schedule/schedule-master/docs/Makefile', 'test-folders/schedule/schedule-master/docs/conf.py', 'test-folders/schedule/schedule-master/schedule/__init__.py', 'test-folders/schedule/schedule-master/docs/_static/placeholder.txt', 'test-folders/schedule/schedule-master/docs/_templates/sidebarintro.html']
+()
+{0: ['test-folders/schedule'], 1: ['test-folders/schedule/schedule-master'], 2: ['test-folders/schedule/schedule-master/docs', 'test-folders/schedule/schedule-master/schedule'], 3: ['test-folders/schedule/schedule-master/docs/_static', 'test-folders/schedule/schedule-master/docs/_templates'], 4: []}
+()
+{0: ['test-folders/schedule'], 1: ['schedule-master'], 2: ['test_schedule.py', 'setup.py', 'MANIFEST.in', 'requirements-dev.txt', 'HISTORY.rst', 'LICENSE.txt', 'docs', 'README.rst', 'FAQ.rst', 'schedule', '.gitignore', '.travis.yml', 'AUTHORS.rst', 'tox.ini'], 3: ['faq.rst', '_static', 'api.rst', 'index.rst', 'Makefile', 'conf.py', '_templates', '__init__.py'], 4: ['placeholder.txt', 'sidebarintro.html']}
+()
+
+'''
