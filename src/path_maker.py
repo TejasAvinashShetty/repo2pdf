@@ -4,7 +4,8 @@ So one can sort out folders from files.
 After git cloning the repository will be present locally.
 It will consist of files and folders in the first level.
 After this level one will have to recursively go through each folder,
-and copy the paths
+and copy the paths.
+'Makefile' is an exception to this line of thinking.
 '''
 '''
 tejas@g3:~/git-tejas/repo2pdf/tests/test-folders/schedule/
