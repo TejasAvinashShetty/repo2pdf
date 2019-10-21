@@ -1,6 +1,4 @@
 # repo2pdf
-gitter-badge
-
 [![Join the chat at https://gitter.im/repo2pdf/community](https://badges.gitter.im/repo2pdf/community.svg)](https://gitter.im/repo2pdf/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Takes the link to github repository and prints out every file as a PDF
