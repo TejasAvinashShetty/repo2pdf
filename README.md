@@ -1,5 +1,7 @@
 # repo2pdf
-Takes the link to github repository and prints out every file as a PDF
+Takes the link to github repository and prints out every file as a PDF.
+
+[![Gitter](https://badges.gitter.im/repo2pdf/community.svg)](https://gitter.im/repo2pdf/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ## Prerequisites
 - Install wkhtml2pdf from https://wkhtmltopdf.org/ or use your package manager
