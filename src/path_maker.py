@@ -25,6 +25,10 @@ def folder_opener(folder):
                                        representing the paths
                                        of the sub-folders in the folder
 
+    folder_contents : list of strings
+                      list containing the strings representing all the
+                      contents of the folder
+
     '''
     folder_contents = listdir(folder)
     list_of_files_in_the_folder = []
@@ -68,30 +72,37 @@ def path_maker(repository_name):
                                   repository)
 
     repo_folder_levelled_dict : dictionary
-                                      dictionary containing the
-                                      structure of the repository at
-                                      level. Keys are levels and values
-                                      are the paths to the sub-folders
-                                      (not files) at each level.
+                                dictionary containing the
+                                structure of the repository at
+                                level. Keys are levels and values
+                                are the paths to the sub-folders
+                                (not files) at each level.
+
+    repo_levelled_dict : dictionary
+                         dictionary containing the
+                         structure of the repository at
+                         level. Keys are levels and values
+                         are the names of the sub-folders
+                         and files at each level.
     '''
     print('Current working directory')
     print(getcwd())
     repository_member_path_list = []
     # repo_folder_levelled_dict = {0: ['.'], }
-    # repository_levelled_dict = {0: ['.'], }
+    # repo_levelled_dict = {0: ['.'], }
     repo_folder_levelled_dict = {0: [repository_name], }
-    repository_levelled_dict = {0: [repository_name], }
+    repo_levelled_dict = {0: [repository_name], }
     i = 0
 
     while True:
         folder_list = repo_folder_levelled_dict[i]
         repo_folder_levelled_dict[i + 1] = []
-        repository_levelled_dict[i + 1] = []
+        repo_levelled_dict[i + 1] = []
         for folder in folder_list:
             classified_contents = folder_opener(folder)
             repository_member_path_list.extend(classified_contents[0])
             repo_folder_levelled_dict[i + 1].extend(classified_contents[1])
-            repository_levelled_dict[i + 1].extend(classified_contents[2])
+            repo_levelled_dict[i + 1].extend(classified_contents[2])
 
         if repo_folder_levelled_dict[i + 1]:
             i = i + 1
@@ -102,4 +113,4 @@ def path_maker(repository_name):
 
     return [repository_member_path_list,
             repo_folder_levelled_dict,
-            repository_levelled_dict]
+            repo_levelled_dict]
