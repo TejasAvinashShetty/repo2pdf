@@ -25,4 +25,7 @@ repository_member_dict : dictionary
 
 def test_path_maker():
     pass
+
+repo_pdf = repository_name + '_pdf'
+mkdir(repo_pdf)
 '''
