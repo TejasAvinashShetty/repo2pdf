@@ -3,11 +3,12 @@ Once, the paths are made by path maker,
 - make a folder "repo_name_pdf"
 - Make a similar folder structure as in the repo
 - Use wkhtml2pdf to make the pdfs from each file
-- save the resulting  pdf file in the simlar way as it's original avatar
+- save the resulting  pdf file in a simlar way as it's original avatar
 "i.e. in the same relative path as the original code file but in the
  path begining from 'repo_name_pdf' instead of 'repo_name'"
 
- 0. make a folder 'pdf'and do all saving of pdfs in this
+ 0. make a folder 'pdf' (make only if it does not already exist.)
+    and do all saving of pdfs in 'pdf'
  1. folder_structure_maker using repo_folder_levelled_dict
  2. interface to wkhtml2pdf (accept url, path to pdf, name of pdf)
     to produce pdf
