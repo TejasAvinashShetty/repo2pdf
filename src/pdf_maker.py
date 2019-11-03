@@ -32,6 +32,8 @@ def folder_creator(repo_folder_levelled_dict):
     '''Makes the folder and builds internal structure
     Makes the folder. Also, uses the sub-folder  information
     to build the entire internal structure.
+    Assumes we are inside the folder consisting the git
+    cloned repository.
     Inputs:
 
     repo_folder_levelled_dict : dictionary
@@ -44,4 +46,9 @@ def folder_creator(repo_folder_levelled_dict):
     Outputs:
     None
     '''
+    chdir('pdf')
+    for i in repo_folder_levelled_dict.keys():
+        for folder in repo_folder_levelled_dict[i]:
+            mkdir(folder)
+
     return None
