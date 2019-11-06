@@ -46,6 +46,7 @@ def folder_creator(repo_folder_levelled_dict):
     Outputs:
     None
     '''
+    chdir('../')
     chdir('pdf')
     for i in repo_folder_levelled_dict.keys():
         for folder in repo_folder_levelled_dict[i]:
