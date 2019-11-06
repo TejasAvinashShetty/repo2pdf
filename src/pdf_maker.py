@@ -1,5 +1,6 @@
 from os import mkdir, chdir
 from os.path import isfile, isdir
+from subprocess import Popen,  PIPE
 
 
 '''
@@ -51,5 +52,32 @@ def folder_creator(repo_folder_levelled_dict):
     for i in repo_folder_levelled_dict.keys():
         for folder in repo_folder_levelled_dict[i]:
             mkdir(folder)
+
+    return None
+
+
+def wkhtmltopdf(url, pdf_path):
+    '''Interface to wkhtmltopdf
+    It takes the url and the pdf_path. Then, it passes it on to
+    wkhtmltopdf which then downloads and saves the pdf to the specified
+    location.
+    Inputs :
+    url : str
+          URL of the place on the internet from which we must access the
+          file.
+
+    pdf_path : str
+               Path relative to the current directory where one must
+               store (save) the file.
+
+    Output:
+    None
+    '''
+    # process = Popen(["wkhtmltopdf",
+    # "https://github.com/TejasAvinashShetty/PH413/blob/master/k_cnot.py",
+    # "k_cnot.pdf"])
+    process = Popen(["wkhtmltopdf", url, pdf_path])
+    # process = subprocess.Popen(["ls", "-l"], stdout=subprocess.PIPE)
+    # (output, err) = process.communicate()
 
     return None
