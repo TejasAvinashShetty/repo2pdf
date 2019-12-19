@@ -6,5 +6,7 @@ Takes the link to github repository and prints out every file as a PDF
 ## Prerequisites
 - Install wkhtml2pdf from https://wkhtmltopdf.org/ or use your package manager
   for example see [Instructions for Ubuntu](https://gist.github.com/brunogaspar/bd89079245923c04be6b0f92af431c10)
-  
+
+For details please see [Home](https://github.com/TejasAvinashShetty/repo2pdf/wiki)
+
 For references  see [references.md](https://github.com/TejasAvinashShetty/repo2pdf/blob/master/references.md)
